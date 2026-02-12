@@ -5,6 +5,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      build: {
+        target: 'ES2022',
+        outDir: 'dist',
+        emptyOutDir: true,
+      },
       server: {
         host: 'localhost',
       },
